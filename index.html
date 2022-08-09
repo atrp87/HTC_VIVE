@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VIVE</title>
+  <link rel="icon" type="image/x-icon" href="/favicon/favicon.ico">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+</head>
+  <style> 
+    section { padding: 60px 0; } 
+    img { width: 100%; }
+  </style>
+<body class="bg-dark">
+
+<!-- ? navbar -->
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+  <div class="container-xxl">
+    <span class="navbar-brand">
+      <img class="img-fluid" src="./assets/vive-logo.png" alt="VIVE brand logo" style="width: 50px;">
+    </span>
+    <!-- ? toggle btn mobile nav -->
+    <button 
+      class="navbar-toggler" 
+      type="button" 
+      data-bs-toggle="collapse"
+      data-bs-target="#main-nav"
+      aria-controls="main-nav"
+      aria-expanded="false"
+      aria-label="toggle navigation">
+      <span>
+        <span class="navbar-toggler-icon"></span>
+      </span>
+    </button>
+    <!-- ? nav links -->
+    <div id="main-nav" text-info" class="collapse navbar-collapse justify-content-end align-center">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a href="#specs" class="nav-link text-light">Specs</a>
+        </li>
+        <li class="nav-item">
+          <a href="#reviews" class="nav-link text-light">Reviews</a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link text-light">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link text-light position-relative" data-bs-toggle="modal" data-bs-target="#staticDrop">
+            <i class="bi bi-cart3"></i> 
+            <span class="active-units d-none position-absolute top-25 translate-middle badge rounded-circle bg-danger p-1">
+              <span class="cart-units">
+              <!-- ? cart unit amount -->
+              </span>
+            </span>
+          </a>
+        </li>
+        <li class="nav-item d-md-none">
+          <a href="#pricing" class="btn btn-sm btn-info">Shop Now</a>
+        </li>
+        <li class="nav-item ms-2 d-none d-md-inline">
+          <a href="#pricing" class="btn btn-info">Shop Now</a>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- ? side cart -->
+<aside class=" position-fixed d-none d-xl-block  top-0 end-0 mt-3">
+  <button type="button" class="btn btn-info aside-cart d-none position-relative m-1" data-bs-toggle="modal" data-bs-target="#staticDrop">
+    <i class="bi bi-cart3"></i> 
+    <span class="active-units d-none position-absolute top-25 start-50 translate-middle badge rounded-circle bg-danger p-1">
+      <span class="cart-units">
+        <!-- ? cart unit amount -->
+      </span>
+    </span>
+  </button>
+</aside>
+
+<main>
+  <!-- ? hero -->
+  <section id="intro" class="bg-dark mt-1 mt-lg-5">
+    <div class="container-lg">
+      <div class="row justify-content-center align-items-center">
+        <div class="col-md-5 text-center text-md-start">
+          <h1>
+            <div class="display-4 text-light">VIVE <span class="text-info">Pro 2</span></div>
+            <div class="display-6 text-secondary">Sharp. Precise. Immersive.</div>
+          </h1>
+          <p class="lead my-4 text-secondary">
+            Next-level graphics and sound. Base Station 2.0 + Controller 2.0 included.
+          </p>
+          <a href="#pricing" class="btn btn-info btn-square btn-lg">Shop Now</a>
+        </div>
+        <div class="col-md-5 text-center d-none d-md-block">
+          <img class="img-fluid" src="./assets/pro-2-intro.png" alt="VIVE Pro 2 headset">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ? pricing -->
+  <section id="pricing" class="bg-light mt-5">
+    <div class="container-lg">
+      <div class="text-center">
+        <h2>Compare VIVE Systems.</h2>
+        <p class="lead text-muted">Choose a build that suits you.</p>
+      </div>
+      <div class="row my-5 gy-4 justify-content-center align-items-center pricing-cards">
+      <!-- ? JS ( renderProducts() ) -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ? specs -->
+  <section id="specs" class="bg-dark">
+    <div class="container-md">
+      <div class="text-center">
+        <h2 class="text-light">Specs.</h2>
+        <p class="lead text-muted">Vive Technical Specifications.</p>
+      </div>
+      <div class="row my-5 g-5 justify-content-around align-items-center">
+        <div class="col-6 col-lg-4">
+          <img src="./assets/vr-girl.png" class="img-fluid" alt="girl in a black shirt using VIVE Pro 2 with controllers">
+        </div>
+        <!-- ? accordion col -->
+        <div class="col-lg-6">
+        <!-- ? accordion 1 -->
+          <div class="accordion accordion" id="models">
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header bg-secondary" id="heading-one">
+              <button 
+                class="accordion-button border-dark bg-light text-dark fw-bold" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#model-one"
+                aria-expanded="true" aria-controls="model-one"
+                >
+                Pro Series
+              </button>
+              </h2>
+              <!-- ? accordion 1 body -->
+              <div 
+                id="model-one" 
+                class="accordion-collapse collapse show"
+                aria-labelledby="model-one" 
+                data-bs-parent="#models"
+                >
+                <div class="accordion-body bg-dark border-dark p-1">
+                  <div class="container bg-dark border-dark">
+                    <div class="row py-1">
+                      <div class="col-6 text-light border-bottom fw-bold py-3">Resolution</div>
+                      <div class="col-6 text-light border-bottom py-2">2448 × 2448 pixels per eye (4896 x 2448 pixels combined)</div>
+                      <div class="col-6 text-light border-bottom fw-bold py-3">Refresh Rate</div>
+                      <div class="col-6 text-light border-bottom py-2">90/120 Hz (only 90Hz supported via VIVE Wireless Adapter)</div>
+                      <div class="col-6 text-light fw-bold py-3">Sensors</div>
+                      <div class="col-6 text-light py-2">G-sensor, gyroscope, proximity, IPD sensor, SteamVR Tracking V2.0 (compatible with SteamVR 1.0 and 2.0 base stations)</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ? accordion 2 -->
+          <div class="accordion accordion" id="models">
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header bg-secondary" id="heading-two">
+                <button 
+                class="accordion-button bg-light text-dark fw-bold mt-3" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#model-two"
+                aria-expanded="false" aria-controls="model-two"
+                >
+                Cosmos Series
+                </button>
+              </h2>
+              <!-- ? accordion 2 body -->
+              <div 
+                id="model-two" 
+                class="accordion-collapse collapse"
+                aria-labelledby="model-two" 
+                data-bs-parent="#models"
+                >
+                <div class="accordion-body bg-dark">
+                  <div class="container">
+                    <div class="row py-1">
+                      <div class="col-6 text-light border-bottom fw-bold py-3">Resolution</div>
+                      <div class="col-6 text-light border-bottom py-2">1440 x 1700 pixels per eye (2880 x 1700 pixels combined)</div>
+                      <div class="col-6 text-light border-bottom fw-bold py-3">Refresh Rate</div>
+                      <div class="col-6 text-light border-bottom py-2">90 Hz</div>
+                      <div class="col-6 text-light fw-bold py-3">Field of view</div>
+                      <div class="col-6 text-light py-2">Maximum 110 degrees</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ? accordion 3 -->
+          <div class="accordion accordion" id="models">
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header" id="heading-three">
+                <button 
+                class="accordion-button bg-light text-dark fw-bold mt-3" 
+                type="button" 
+                data-bs-toggle="collapse" 
+                data-bs-target="#model-three"
+                aria-expanded="false" aria-controls="model-three"
+                >
+                Flow Series
+                </button>
+              </h2>
+              <!-- ? accordion 3 body -->
+              <div 
+                id="model-three" 
+                class="accordion-collapse collapse"
+                aria-labelledby="model-three" 
+                data-bs-parent="#models"
+                >
+                <div class="accordion-body bg-dark">
+                  <div class="container">
+                    <div class="row py-1">
+                      <div class="col-6 text-light border-bottom fw-bold py-3">Resolution</div>
+                      <div class="col-6 text-light border-bottom py-2">3.2k combined (2x 2.1” LCD 1600 x1600 per eye)</div>
+                      <div class="col-6 text-light border-bottom fw-bold py-3">Refresh Rate</div>
+                      <div class="col-6 text-light border-bottom py-2">75 Hz</div>
+                      <div class="col-6 text-light border-bottom fw-bold py-3">Field of view</div>
+                      <div class="col-6 text-light border-bottom py-2">Maximum 100 degrees</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <!-- ? reviews -->
+  <section id="reviews" class="bg-light">
+    <div class="container-md">
+      <div class="text-center">
+        <h2>Reviews.</h2>
+        <p class="lead text-muted">See what others are saying about VIVE.</p>
+      </div>
+      <div class="row justify-content-center mt-5">
+        <div class="col-lg-9 mb-3">
+          <!-- ? list group 1 -->
+          <ul class="list-group">
+            <p class="text-warning">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </p>
+          </ul>
+          <h5>I've had a Vive Pro since 2018 and I love it</h5>
+          <p class="text-muted">I'm very satisfied with my experiences with HTC/Vive. Their customer service is always quick and responds with exactly what I need. I sent in a broken cable that probably should not have gone under warranty, and I got a new one back for free. I have asked for extra chargers, and while I was prepared to pay for them, they ended up sending them to me for free.</p>
+        </div>
+        <div class="col-lg-9 mb-3">
+          <ul class="list-group">
+            <p class="text-warning">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </p>
+          </ul>
+          <h5>brilliant but flawed and demanding product</h5>
+          <p class="text-muted">It's expensive, bulky, hard to set up… But still so easy to love</p>
+        </div>
+        <div class="col-lg-9">
+          <ul class="list-group">
+            <p class="text-warning text-s">
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-half"></i>
+            </p>
+          </ul>
+          <h5>Didn't come with the head phones</h5>
+          <p class="text-muted">Came in great condition it did not come with the headphones though and was. Sold as full set I use my own head set but I did keep getting tangled in all the cable and have to buy a USB extension but I guess I have way better audio than stock vive</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ? advertisement -->
+  <section id="specs" class="bg-dark">
+    <div class="container-lg mb-5">
+      <div class="text-center">
+        <h2 class="text-light">More from VIVE.</h2>
+        <p class="lead text-muted">Learn about the latest VR news.</p>
+      </div>
+    <div class="row gy-5 mt-5">
+      <div class="col-lg-6">
+        <!-- ? card 1 -->
+        <div class="card text-bg-dark shadow-lg text-center">
+          <img src="./assets/vive1.png" alt="">
+          <div class="card-img-overlay">
+            <h5 class="card-title text-dark">Complete your set up.</h5>
+            <p class="card-text text-dark">Everything you need for VR adventures</p>
+            <p class="card-text text-primary">Explore accessories</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <!-- ? card 2 -->
+        <div class="card shadow-lg text-bg-dark text-center">
+          <img src="./assets/vive2.png" alt="">
+            <div class="card-img-overlay">
+              <h5 class="card-title text-light">Experience. Learn. Enjoy.</h5>
+              <p class="card-text">Exploring how XR technology is changing the way we live, work and play.</p>
+              <p class="card-text text-primary">Watch now</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <!-- ? card 3 -->
+          <div class="card shadow-lg text-bg-dark text-center">
+            <img src="./assets/vive3.png" alt="">
+              <div class="card-img-overlay">
+                <h5 class="card-title text-dark">Pick your path into the metaverse.</h5>
+                <p class="card-text text-dark">Experience a new reality with out immersive VR devices.</p>
+                <p class="card-text text-primary">Get yours</p>
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <!-- ? card 4 -->
+          <div class="card shadow-lg text-bg-dark text-center">
+            <img src="./assets/vive4.png" alt="">
+            <div class="card-img-overlay">
+              <h5 class="card-title text-dark">Try VIVE now.</h5>
+              <p class="card-text text-dark">Discover where you can experience VIVE.</p>
+              <p class="card-text text-primary">See locations</p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+
+  <!-- ? contact form -->
+  <section id="contact" class="bg-light">
+      <div class="container-lg">
+        <div class="text-center">
+        <h2>Contact us.</h2>
+        <p class="lead text-muted">Fill out the form with any queries you may have.</p>
+      </div>
+      <div class="row justify-content-center my-5">
+        <div class="col-lg-6">
+          <!-- ? form -->
+          <form>
+            <div class="mb-2">
+              <label for="Inputname" class="form-label">Name</label>
+              <input type="email" class="form-control" id="Inputname" aria-describedby="name">
+            </div>
+            <div class="mb-2">
+              <label for="InputEmail" class="form-label">Email address</label>
+              <input type="email" class="form-control" id="InputEmail" aria-describedby="email">
+              <small id="emailHelp" class="form-text">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="mb-2">
+              <label for="subject" class="form-label">What is your issue ?</label>
+                <div class="mb-4 input-group">
+                  <span class="input-group-text"><i class="bi bi-chat-right-fill"></i></span>
+                  <select id="subject" class="form-select">
+                    <option value="billing" selected>Billing</option>
+                    <option value="delivery">Delivery</option>
+                    <option value="pricing">Pricing</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+            </div>
+            <div class="mb-3">
+              <div class="form-floating">
+                <textarea id="query" class="form-control" style="height: 140px"></textarea>
+                <label for="query">Your query...</label>
+              </div>
+            </div>
+            <div class="mb-4 text-center">
+              <button class="btn btn-info" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ? footer -->
+<footer class="bg-dark">
+  <div class="container-lg mt-5 mb-2">
+    <div class="row text-light">
+      <div class="col-6 col-lg-3 fw-bold">Shop</div>
+      <div class="col-3 fw-bold d-none d-lg-block">For business</div>
+      <div class="col-6 col-lg-3 fw-bold">Support</div>
+      <div class="col-3 fw-bold d-none d-lg-block">More VIVE</div>
+    </div>
+    <div class="row text-light mb-4">
+      <div class="col-6 col-lg-3">
+        <div class="row text-muted fw-light mt-1">
+          <span>All products</span>
+          <span>VIVE Flow</span>
+          <span>Focus series</span>
+          <span>Pro series</span>
+          <span>Cosmos series</span>
+          <span>Compare products</span>
+          <span>Accessories</span>
+        </div>
+      </div>
+      <div class="col-3">
+        <div class="row text-muted mt-1">
+          <span>Solutions</span>
+          <span>ISV partners</span>
+          <span>Stories</span>
+          <span class="text-light fw-bold my-2">For developers</span>
+          <span>Resources</span>
+          <span>Download SDKs</span>
+        </div>
+      </div>
+      <div class="col-3 d-none d-lg-block">
+        <div class="row text-muted mt-1">
+          <span>Product support</span>
+          <span>Setup | Download</span>
+          <span>Contact us</span>
+          <span>Order help</span>
+          <span>Order status</span>
+          <span>Warranty</span>
+        </div>
+      </div>
+      <div class="col-3 d-none d-lg-block">
+        <div class="row text-muted mt-1">
+          <span>Press room</span>
+          <span>Blog</span>
+          <span>VIVE Arts</span>
+          <span>Viveport</span>
+          <span>VIVE Mars</span>
+          <span>VIVE Sync</span>
+          <span>VIVE X</span>
+          <span>Privacy policy</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ? social -->
+  <div class="container-lg">
+    <div class="row border-top pb-3 pt-3 text-light justify-content-between align-items-center">
+      <div class="col-lg-1 text-center text-lg-start fw-bold">
+        <span>HTC</span>
+      </div>
+      <div class="col-lg-5 text-center text-lg-start">
+        <span>© 2011-2022 HTC Corporation</span>
+      </div>
+      <div class="col-lg-5 pt-2 text-center text-lg-end">
+        <span class="pe-lg-4 pe-1"><i class="bi bi-twitter"></i></span>
+        <span class="pe-lg-4 pe-1"><i class="bi bi-instagram"></i></span>
+        <span class="pe-lg-4 pe-1"><i class="bi bi-discord"></i></span>
+        <span class="pe-lg-4 pe-1"><i class="bi bi-facebook"></i></span>
+        <span class="pe-lg-4 pe-1"><i class="bi bi-youtube"></i></span>
+        <span><i class="bi bi-steam"></i></span>
+      </div>
+    </div>
+  </div>
+</div>
+</footer>
+
+<!-- ? modal ( shopping cart ) -->
+<div class="modal fade" id="staticDrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered">
+    <div class="modal-content bg-dark text-light w-100">
+      <div class="modal-header">
+        <h5 class="modal-title" id="staticBackdropLabel">Shopping Cart</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-0">
+        <table class="table table-dark">
+          <thead>
+            <tr>
+              <th scope="col">Product</th>
+              <th scope="col">Quantity</th>
+              <th scope="col" colspan="3">Price</th>
+            </tr>
+          </thead>
+          <tbody class="cart-table">
+            <!-- ? RENDER ITEMS ( JS ) -->
+          </tbody>
+          <tbody>
+            <!-- ? TOTAL -->
+            <td class="border-0">
+              <tr>
+                <th scope="row" class="border-light"></th>
+                <td class="border-light fw-bold">Total:</td>
+                <td colspan="3" class="text-start fw-bold border-light cart-total"></td>
+              </tr >
+            </td>
+          </tbody>
+        </table>
+        <div class="modal-footer border-0">
+          <button type="button" class="btn btn-outline-secondary me-4" data-bs-dismiss="modal">Close</button>
+          <a type="button" class="btn btn-info checkout-btn">Checkout</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    <script src="./javascript/products.js"></script>
+    <script src="./javascript/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+  </body>
+</html>
