@@ -3,7 +3,7 @@ const cartTotal = document.querySelector('.cart-total');
 
 const renderProducts = () => {
   products.forEach(product => {
-
+    console.log(product.img)
     document.querySelector('.pricing-cards').innerHTML += `
       <div class="col-9 col-lg-4 col-xxl-3">
         <div class="card pricing-card border-0 bg-light text-center">
