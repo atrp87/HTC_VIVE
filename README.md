@@ -25,7 +25,9 @@
 - Being more aware of array methods wether they mutate ( e.g sort ) or not. 
 
 ## Screenshots
-![Weather forecast image](city_skies_screenshot.png)
+![VIVE Hero](images/hero.png)
+![VIVE Products](images/products.png)
+![VIVE Cart](images/cart.png)
 
 ## Contact
 Created by [drewpeattie@hotmail.com](mailto:drewpeattie@hotmail.com) - feel free to contact me!
