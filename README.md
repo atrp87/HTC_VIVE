@@ -1,5 +1,5 @@
 # HTC VIVE
-> A Vive products page with shopping cart built using Bootstrap and JS. 
+> Vive products page with shopping cart built using Bootstrap and JS. 
 > Live demo [_here_](https://atrp87.github.io/HTC_VIVE/).
 
 ## Table of Contents
