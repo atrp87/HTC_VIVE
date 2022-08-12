@@ -3,7 +3,7 @@ const cartTotal = document.querySelector('.cart-total');
 
 const renderProducts = () => {
   products.forEach(product => {
-    console.log(product.img)
+
     document.querySelector('.pricing-cards').innerHTML += `
       <div class="col-9 col-lg-4 col-xxl-3">
         <div class="card pricing-card border-0 bg-light text-center">
@@ -118,7 +118,6 @@ const renderCartTotal = () => {
   cartTotal.innerHTML = `£ ${total.toFixed(2)}`;
 };
 
-
 // * UPDATE CART
 const updateCart = () => {
   renderCart();
@@ -192,5 +191,3 @@ const heroSectionHandler = entries => {
 
 const sectionObserver = new IntersectionObserver(heroSectionHandler, objOptions);
 sectionObserver.observe(sectionOne);
-
-
